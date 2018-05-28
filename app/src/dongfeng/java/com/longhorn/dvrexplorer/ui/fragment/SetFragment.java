@@ -9,6 +9,12 @@ import android.view.ViewGroup;
 
 import com.flyzebra.live555.rtsp.RtspVideoView;
 import com.longhorn.dvrexplorer.R;
+import com.longhorn.dvrexplorer.module.wifi.CommandType;
+import com.longhorn.dvrexplorer.module.wifi.ResultData;
+import com.longhorn.dvrexplorer.module.wifi.SocketResult;
+import com.longhorn.dvrexplorer.module.wifi.SocketTools;
+import com.longhorn.dvrexplorer.utils.ByteTools;
+import com.longhorn.dvrexplorer.utils.FlyLog;
 
 /**
  * Created by FlyZebra on 2018/5/17.
@@ -34,5 +40,22 @@ public class SetFragment extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        SocketTools.getInstance().sendCommand(CommandType.GET_RECORD_CFG, new SocketResult() {
+            @Override
+            public void result(ResultData msg) {
+                FlyLog.d("GET_RECORD_CFG length=%d,data=%s", msg.getMark(), ByteTools.bytes2HexString(msg.getBytes()));
+                if(msg.getMark()!=15) return;
+                byte[] ret = msg.getBytes();
+//                if(ret[0]!=0xee||ret[1]!=0xaa||ret[6]!=0x11||ret[7]!=0x00) return;
+                if(ret[8]==0x00){
+                    //设置1080
+                }
+            }
+        });
     }
 }

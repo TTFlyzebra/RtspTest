@@ -13,7 +13,7 @@ import com.flyzebra.flydown.download.DownFileBean;
 import com.flyzebra.flydown.download.DownFileManager;
 import com.flyzebra.flydown.download.IDownListener;
 import com.longhorn.dvrexplorer.R;
-import com.longhorn.dvrexplorer.ui.adapter.VideoLocAdapater;
+import com.longhorn.dvrexplorer.adapter.VideoLocAdapater;
 
 import java.util.ArrayList;
 import java.util.List;

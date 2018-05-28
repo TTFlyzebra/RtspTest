@@ -33,6 +33,7 @@
                 android:textSize="22px" />
 
             <Switch
+                android:id="@+id/set_sw_record"
                 android:layout_width="112px"
                 android:layout_height="73px"
                 android:layout_marginLeft="140px"
@@ -53,6 +54,7 @@
                 android:textSize="22px" />
 
             <Switch
+                android:id="@+id/set_sw_sound"
                 android:layout_width="112px"
                 android:layout_height="73px"
                 android:layout_marginLeft="464px"
@@ -73,6 +75,7 @@
                 android:textSize="22px" />
 
             <Switch
+                android:id="@+id/set_sw_tcjk"
                 android:layout_width="112px"
                 android:layout_height="73px"
                 android:layout_marginLeft="788px"
@@ -101,7 +104,7 @@
                 android:textSize="22px" />
 
             <RadioGroup
-                android:id="@+id/set_time_min"
+                android:id="@+id/set_rg_time_min"
                 android:layout_width="wrap_content"
                 android:layout_height="59px"
                 android:layout_marginTop="249px"
@@ -154,7 +157,7 @@
                 android:textSize="22px" />
 
             <RadioGroup
-                android:id="@+id/set_pix"
+                android:id="@+id/set_rg_pix"
                 android:layout_width="wrap_content"
                 android:layout_height="59px"
                 android:layout_marginTop="419px"
@@ -197,7 +200,7 @@
                 android:textSize="22px" />
 
             <CheckBox
-                android:id="@+id/set_time_time"
+                android:id="@+id/set_info_time"
                 android:layout_width="200px"
                 android:layout_height="59px"
                 android:layout_marginLeft="66px"
@@ -207,7 +210,7 @@
                 android:textSize="22px" />
 
             <CheckBox
-                android:id="@+id/set_time_car"
+                android:id="@+id/set_info_car"
                 android:layout_width="200px"
                 android:layout_height="59px"
                 android:layout_marginLeft="393px"
@@ -252,7 +255,7 @@
                 android:textSize="22px" />
 
             <RadioGroup
-                android:id="@+id/set_time_lm"
+                android:id="@+id/set_time_sensi"
                 android:layout_width="wrap_content"
                 android:layout_height="59px"
                 android:layout_marginTop="761px"

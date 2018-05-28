@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.adapter;
+package com.longhorn.dvrexplorer.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -34,8 +34,8 @@ import java.util.Set;
  */
 
 public class FileAdapater extends RecyclerView.Adapter<FileAdapater.ViewHolder> {
-    private static final int smallImageWidth = 192;
-    private static final int smallImageHeight = 129;
+    private static final int smallImageWidth = 128;
+    private static final int smallImageHeight = 86;
     private static final int smallImageSize = smallImageWidth * smallImageHeight * 2;
     private List<DvrFile> mList;
     private Context mContext;

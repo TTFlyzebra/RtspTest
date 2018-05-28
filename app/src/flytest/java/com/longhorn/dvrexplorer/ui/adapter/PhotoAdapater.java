@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.adapter;
+package com.longhorn.dvrexplorer.adapter;
 
 import android.content.Context;
 import android.content.Intent;

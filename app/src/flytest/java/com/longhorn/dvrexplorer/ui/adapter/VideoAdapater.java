@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.adapter;
+package com.longhorn.dvrexplorer.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

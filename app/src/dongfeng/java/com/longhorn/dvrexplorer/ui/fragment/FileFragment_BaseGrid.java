@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.longhorn.dvrexplorer.R;
-import com.longhorn.dvrexplorer.ui.adapter.FileAdapater;
+import com.longhorn.dvrexplorer.adapter.FileAdapater;
 import com.longhorn.dvrexplorer.data.DvrFile;
 import com.longhorn.dvrexplorer.module.wifi.DataParse;
 import com.longhorn.dvrexplorer.module.wifi.ResultData;

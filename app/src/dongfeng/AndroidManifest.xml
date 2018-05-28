@@ -21,5 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.DvrStateNotifyService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hsae.auto.DVR_SERVICE" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>
