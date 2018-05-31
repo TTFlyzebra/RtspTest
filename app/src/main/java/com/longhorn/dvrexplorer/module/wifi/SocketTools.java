@@ -48,8 +48,8 @@ public class SocketTools {
                     SocketAddress socAddress = new InetSocketAddress(Global.DVR_IP, Global.CMD_PORT);
                     //设置3秒之后即认为是超时
                     socket = new Socket();
-                    socket.connect(socAddress, 3000);
-                    socket.setSoTimeout(5000);
+                    socket.connect(socAddress, 10000);
+                    socket.setSoTimeout(10000);
                     dos = new DataOutputStream(socket.getOutputStream());
 
                     CRC32 crc32 = new CRC32();

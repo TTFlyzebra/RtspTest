@@ -1,11 +1,11 @@
-package com.longhorn.dvrexplorer.ui.fragment;
+package com.longhorn.dvrexplorer.fragment;
 
 import android.os.Bundle;
 import android.view.View;
 
 import com.longhorn.dvrexplorer.data.DvrFile;
 import com.longhorn.dvrexplorer.module.wifi.CommandType;
-import com.longhorn.dvrexplorer.ui.DVRActivity;
+import com.longhorn.dvrexplorer.DVRActivity;
 
 import java.util.ArrayList;
 
@@ -14,26 +14,26 @@ import java.util.ArrayList;
  * Descrip:
  */
 
-public class FileFragment_NOR1 extends FileFragment_BaseGrid {
+public class FileFragment_PHO1 extends FileFragment_BaseGrid {
 
-    public FileFragment_NOR1() {
+    public FileFragment_PHO1() {
     }
 
-    public static FileFragment_NOR1 newInstance() {
+    public static FileFragment_PHO1 newInstance() {
         Bundle args = new Bundle();
-        FileFragment_NOR1 fragment = new FileFragment_NOR1();
+        FileFragment_PHO1 fragment = new FileFragment_PHO1();
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public byte[] getCommandType() {
-        return CommandType.GET_FILE_NOR;
+        return CommandType.GET_FILE_PHO;
     }
 
     @Override
     public void onItemClick(View view, int pos) {
-        FileFragment_PLAY fragment = FileFragment_PLAY.newInstance((ArrayList<DvrFile>) mList,pos);
+        FileFragment_VIEW fragment = FileFragment_VIEW.newInstance((ArrayList<DvrFile>) mList,pos);
         ((DVRActivity)getActivity()).addFragment(this,fragment);
     }
 

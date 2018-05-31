@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-    tools:context="com.longhorn.dvrexplorer.ui.DVRActivity">
+    tools:context="com.longhorn.dvrexplorer.DVRActivity">
 
     <com.flyzebra.live555.rtsp.RtspVideoView
         android:id="@+id/fm_rtspview_01"

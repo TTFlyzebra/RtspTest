@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui;
+package com.longhorn.dvrexplorer;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -115,7 +115,7 @@ public class DVRActivity extends Activity {
     private boolean addFragment(String fName) {
         try {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            Class<?> cls = Class.forName("com.longhorn.dvrexplorer.ui.fragment." + fName);
+            Class<?> cls = Class.forName("com.longhorn.dvrexplorer.fragment." + fName);
             Constructor<?> cons = cls.getConstructor();
             Fragment fragment = (Fragment) cons.newInstance(); //
             ft.replace(R.id.ac_dvr_fm01, fragment).commit();

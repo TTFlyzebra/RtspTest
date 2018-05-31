@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.fragment;
+package com.longhorn.dvrexplorer.fragment;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -83,7 +83,7 @@ public class FileFragment extends Fragment{
     public boolean replaceFragment(String fName){
         try {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            Class<?> cls = Class.forName("com.longhorn.dvrexplorer.ui.fragment."+fName);
+            Class<?> cls = Class.forName("com.longhorn.dvrexplorer.fragment."+fName);
             Constructor<?> cons = cls.getConstructor();
             Fragment fragment = (Fragment) cons.newInstance(); //
             ft.replace(R.id.file_fm01, fragment).commit();

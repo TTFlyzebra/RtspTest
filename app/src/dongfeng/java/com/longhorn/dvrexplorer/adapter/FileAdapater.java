@@ -118,11 +118,15 @@ public class FileAdapater extends RecyclerView.Adapter<FileAdapater.ViewHolder> 
     }
 
     public void loadImageView(int first, int last) {
+        FlyLog.d("loadImageView %d-%d", first, last);
         try {
-            if(mList==null||mList.get(first).type==2){
+            if (mList == null || first < 0 || first >= mList.size() || last < 0 || last >= mList.size()) {
+                FlyLog.e("mList==null||first<=0||first>=mList.size()||last<=0||last>=mList.size() first=%d,last=%d",first,last);
                 return;
             }
-            FlyLog.d("loadImageView %d-%d", first, last);
+            if (mList.get(first).type == 2) {
+                return;
+            }
             for (int i = first; i <= last; i++) {
                 Bitmap bitmap = doubleBitmapCache.get(mList.get(i).getUrl());
                 if (null != bitmap) {
@@ -219,9 +223,9 @@ public class FileAdapater extends RecyclerView.Adapter<FileAdapater.ViewHolder> 
         protected void onPostExecute(Bitmap bitmap) {
             ImageView imageView = mRecyclerView.findViewWithTag(dvrFile.getUrl());
             if (imageView != null) {
-                if(bitmap!=null){
+                if (bitmap != null) {
                     imageView.setImageBitmap(bitmap);
-                }else{
+                } else {
                     imageView.setImageResource(R.drawable.load_photo_failed);
                 }
             }

@@ -6,7 +6,7 @@
     android:layout_marginLeft="-146px"
     android:layout_marginTop="-106px"
     android:background="#000"
-    tools:context="com.longhorn.dvrexplorer.ui.DVRActivity">
+    tools:context="com.longhorn.dvrexplorer.DVRActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/file_pho_viewpager"

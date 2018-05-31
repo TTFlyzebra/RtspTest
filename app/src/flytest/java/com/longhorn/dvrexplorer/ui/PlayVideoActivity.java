@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.longhorn.dvrexplorer.R;
-import com.longhorn.dvrexplorer.ui.fragment.PlayVideoFragment;
+import com.longhorn.dvrexplorer.fragment.PlayVideoFragment;
 
 
 public class PlayVideoActivity extends Activity {

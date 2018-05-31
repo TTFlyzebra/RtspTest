@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.fragment;
+package com.longhorn.dvrexplorer.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -189,7 +189,7 @@ public class FileFragment_VIEW extends Fragment {
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
             ImageView imageView = new ImageView(getActivity());
-            Glide.with(getActivity()).load(mList.get(position).getUrl()).placeholder(R.drawable.load_photo_loading)
+            Glide.with(getActivity()).load(mList.get(position).getUrl()).placeholder(R.drawable.load_range)
                     .error(R.drawable.load_photo_failed).into(imageView);
             container.addView(imageView);
             return imageView;

@@ -13,9 +13,9 @@ import com.longhorn.dvrexplorer.module.wifi.CommandType;
 import com.longhorn.dvrexplorer.module.wifi.ResultData;
 import com.longhorn.dvrexplorer.module.wifi.SocketResult;
 import com.longhorn.dvrexplorer.module.wifi.SocketTools;
-import com.longhorn.dvrexplorer.ui.fragment.PhotoFragment;
-import com.longhorn.dvrexplorer.ui.fragment.RtspViewFragment;
-import com.longhorn.dvrexplorer.ui.fragment.VideoNorFragment;
+import com.longhorn.dvrexplorer.fragment.PhotoFragment;
+import com.longhorn.dvrexplorer.fragment.RtspViewFragment;
+import com.longhorn.dvrexplorer.fragment.VideoNorFragment;
 import com.longhorn.dvrexplorer.utils.ByteTools;
 import com.longhorn.dvrexplorer.utils.FlyLog;
 

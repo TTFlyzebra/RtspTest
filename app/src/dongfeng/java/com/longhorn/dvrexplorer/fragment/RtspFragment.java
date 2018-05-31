@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.fragment;
+package com.longhorn.dvrexplorer.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import com.longhorn.dvrexplorer.module.wifi.SocketTools;
  * Descrip:
  */
 
-public class RtspFragment extends Fragment{
+public class RtspFragment extends Fragment implements SocketResult{
     private RtspVideoView rtspVideoView;
     private Button rtsp_evt,rtsp_pho;
     private Handler mHandler = new Handler(Looper.getMainLooper());
@@ -103,5 +103,10 @@ public class RtspFragment extends Fragment{
     public void onStop() {
         mHandler.removeCallbacksAndMessages(null);
         super.onStop();
+    }
+
+    @Override
+    public void result(ResultData msg) {
+
     }
 }

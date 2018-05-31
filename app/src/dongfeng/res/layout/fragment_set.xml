@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#000"
     android:scrollbars="none"
-    tools:context="com.longhorn.dvrexplorer.ui.DVRActivity">
+    tools:context="com.longhorn.dvrexplorer.DVRActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,14 +104,14 @@
                 android:textSize="22px" />
 
             <RadioGroup
-                android:id="@+id/set_rg_time_min"
+                android:id="@+id/set_rg_time"
                 android:layout_width="wrap_content"
                 android:layout_height="59px"
                 android:layout_marginTop="249px"
-                android:checkedButton="@+id/set_teim_3min">
+                android:checkedButton="@+id/set_time_5min">
 
                 <RadioButton
-                    android:id="@+id/set_teim_1min"
+                    android:id="@+id/set_time_1min"
                     android:layout_width="200px"
                     android:layout_height="59px"
                     android:layout_marginLeft="66px"
@@ -121,23 +121,23 @@
                     android:textSize="22px" />
 
                 <RadioButton
-                    android:id="@+id/set_teim_2min"
+                    android:id="@+id/set_time_3min"
                     android:layout_width="200px"
                     android:layout_height="59px"
                     android:layout_marginLeft="393px"
                     android:layout_marginTop="-59px"
                     android:button="@drawable/set_crd"
-                    android:text="2分钟"
+                    android:text="3分钟"
                     android:textSize="22px" />
 
                 <RadioButton
-                    android:id="@+id/set_teim_3min"
+                    android:id="@+id/set_time_5min"
                     android:layout_width="200px"
                     android:layout_height="59px"
                     android:layout_marginLeft="720px"
                     android:layout_marginTop="-59px"
                     android:button="@drawable/set_crd"
-                    android:text="3分钟"
+                    android:text="5分钟"
                     android:textSize="22px" />
             </RadioGroup>
 
@@ -235,6 +235,7 @@
                 android:textSize="22px" />
 
             <Switch
+                android:id="@+id/set_sw_collide"
                 android:layout_width="112px"
                 android:layout_height="73px"
                 android:layout_marginLeft="959px"
@@ -255,7 +256,7 @@
                 android:textSize="22px" />
 
             <RadioGroup
-                android:id="@+id/set_time_sensi"
+                android:id="@+id/set_rg_sensi"
                 android:layout_width="wrap_content"
                 android:layout_height="59px"
                 android:layout_marginTop="761px"
@@ -272,7 +273,7 @@
                     android:textSize="22px" />
 
                 <RadioButton
-                    android:id="@+id/set_lm_nor"
+                    android:id="@+id/set_lm_medium"
                     android:layout_width="200px"
                     android:layout_height="59px"
                     android:layout_marginLeft="494px"
@@ -309,6 +310,7 @@
                 android:textSize="22px" />
 
             <Button
+                android:id="@+id/set_factory"
                 android:layout_width="183px"
                 android:layout_height="58px"
                 android:layout_marginLeft="326px"
@@ -320,6 +322,7 @@
                 android:textSize="22px" />
 
             <Button
+                android:id="@+id/set_format"
                 android:layout_width="183px"
                 android:layout_height="58px"
                 android:layout_marginLeft="664px"

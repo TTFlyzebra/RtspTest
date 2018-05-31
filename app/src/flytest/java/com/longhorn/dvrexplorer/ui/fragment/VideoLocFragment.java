@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.fragment;
+package com.longhorn.dvrexplorer.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;

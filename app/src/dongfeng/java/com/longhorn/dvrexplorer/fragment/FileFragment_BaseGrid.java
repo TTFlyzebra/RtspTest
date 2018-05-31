@@ -1,4 +1,4 @@
-package com.longhorn.dvrexplorer.ui.fragment;
+package com.longhorn.dvrexplorer.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -260,10 +260,14 @@ public abstract class FileFragment_BaseGrid extends Fragment implements SocketRe
     private void showPageInfo() {
         adapater.loadImageView(first, last);
         page = (first + 3) / 6 + 1;
-        String text = (first + 1) + "-" + (last + 1) + "(" + sumItem + ")" + "   " + page + "/" + (sumItem + 5) / 6;
+        String text = Math.max(1,first + 1) + "-" + Math.max(1,last + 1) + "(" + sumItem + ")" + "   " + page + "/" + (sumItem + 5) / 6;
         bt_file_up.setEnabled(first >= 3);
         bt_file_down.setEnabled(last < (sumItem - 1));
-        tv_sum_info.setText(text);
+        if(sumItem==0){
+            tv_sum_info.setText("0-0(0) 0/0");
+        }else{
+            tv_sum_info.setText(text);
+        }
     }
 
     public abstract void onItemClick(View view, int pos);

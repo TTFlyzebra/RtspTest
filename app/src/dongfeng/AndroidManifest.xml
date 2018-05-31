@@ -12,10 +12,11 @@
         android:theme="@style/FullAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ui.DVRActivity"
+            android:name=".DVRActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
